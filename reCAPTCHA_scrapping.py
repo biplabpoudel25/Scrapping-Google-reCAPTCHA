@@ -11,7 +11,7 @@ os.makedirs(output_dir, exist_ok=True)
 
 DRIVER_PATH = './chromedriver'
 
-num_images = 9000
+num_images = 10000
 
 options = Options()
 options.add_argument('--headless')
@@ -21,7 +21,7 @@ options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome(options=options)
 url = 'https://www.google.com/recaptcha/api2/demo'
 
-for i in range(6762, num_images):
+for i in range(num_images):
     driver.get(url)
 
     # Move into the first iFrame (checkbox)
